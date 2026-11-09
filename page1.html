@@ -74,12 +74,22 @@
     <div class="dot_nav" data-index="3"></div>
   </div>
   <script>
-  const slides_cycle = document.querySelectorAll('.recycle_images .certification_slider');
+  const slides_cycle = document.querySelectorAll('.recycle_images .certification_slider'); // using the querySelectorAll to join up all classes adding variables
     const dots_nav = document.querySelectorAll('.dots_for_navigation .dot_nav');
     const next_Slide = document.querySelector('.nav-arrow.right');
     const prev_Slide = document.querySelector('.nav-arrow.left');
     let CI = 0;
     let slide_Move;
+
+    function Active_slide(i) { // declares a function i is the arguement i represents an index 0 first slide 1 second slide
+                  CI = (i + slides_cycle.length) % slides_cycle.length; // if its at 0 it goes to 1 the last index 3 should not go to 4 it should loop back to 0
+                  slides_cycle.forEach(cert => cert.classList.remove('current_slide')); // when moving onto the next slide the previous slide is no longer active 
+                  dots.forEach(dot_nav => dot_nav.classList.remove('current_dot')); // same with here the new dot is active not the previous one 
+                  slides_cycle[CI].classList.add('current_slide'); // if its on the current certifiate it should be active and showns as the current slide
+                  if (dots[CI]) {
+                        dots[CI].classList.add('Current_dot'); //checks if dot is equal to the current slide then it is updated to the correct dot
+                  }
+                  }
   </script>
 
   </main>
