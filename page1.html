@@ -53,14 +53,14 @@
   </table>
   <div class="recycle_images">
         <span class="cert-slide active"><img src="pic1.png" alt="cert1"></span>
-        <span class="cert-slide_2"><img src="pic2.jpeg" alt="cert2"></span>
-        <span class="cert-slide_3"><img src="pic3.png" alt="cert3"></span>
-        <span class="cert-slide_4"><img src="pic4.png" alt="cert4"></span>
+        <span class="certification_slider"><img src="pic2.jpeg" alt="cert2"></span>
+        <span class="certification_slider"><img src="pic3.png" alt="cert3"></span>
+        <span class="certification_slider"><img src="pic4.png" alt="cert4"></span>
       </div>
       
    <div class="controls_arrow">
         <button class="nav-arrow left"><img src="pic10.png" alt="Previous"></button>
-        <button class="arrow-right"><img src="pic10.png" alt="Next"></button>
+        <button class="nav-arrow right"><img src="pic10.png" alt="Next"></button>
       </div>
     <div class="Further_info">
     <div class="member-name">Certification Details</div>
@@ -69,10 +69,18 @@
   
   <div class="dots_for_navigation">
     <div class="dot active" data-index="0"></div>
-    <div class="dot_2" data-index="1"></div>
-    <div class="dot_3" data-index="2"></div>
-    <div class="dot_4" data-index="3"></div>
+    <div class="dot_nav" data-index="1"></div>
+    <div class="dot_nav" data-index="2"></div>
+    <div class="dot_nav" data-index="3"></div>
   </div>
+  <script>
+  const slides_cycle = document.querySelectorAll('.recycle_images .certification_slider');
+    const dots_nav = document.querySelectorAll('.dots_for_navigation .dot_nav');
+    const next_Slide = document.querySelector('.nav-arrow.right');
+    const prev_Slide = document.querySelector('.nav-arrow.left');
+    let CI = 0;
+    let slide_Move;
+  </script>
 
   </main>
 </body>
