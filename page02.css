@@ -30,5 +30,17 @@ th, td {
     padding: 8px;
 }
 
+.recycle {
+    background-color: #c49393; 
+    width: 100%;
+    max-width: 380px; 
+    position: relative;
+    height: 420px;   
+    margin: 0 auto;
+    overflow: hidden;
+    
+  }
+  
+
 
 
