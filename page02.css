@@ -31,7 +31,7 @@ th, td {
 }
 
 .recycle {
-    background-color: #c49393; 
+    background-color: hwb(0 69% 2%);
     width: 100%;
     max-width: 380px; 
     position: relative;
